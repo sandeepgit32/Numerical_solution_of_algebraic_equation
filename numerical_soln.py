@@ -1,4 +1,5 @@
 import math
+import sys
 
 # The equation to be solved is written in form f(x) = 0
 def f(x):
@@ -42,7 +43,7 @@ def bisection_method(tol):
     if f(a)*f(b) < 0:
         t = (a + b)/2
         error = abs(f(t))
-        iteration_counter = 1;
+        iteration_counter = 1
         print('Iteration ',iteration_counter,': Value = ',t, ': Error = ', error)
         while error > tol:
             iteration_counter += 1
@@ -108,7 +109,7 @@ def regulafalsi_method(tol):
     if f(a)*f(b) < 0:
         t = (a*f(b) - b*f(a))/(f(b) - f(a))
         error = abs(f(t))
-        iteration_counter = 1;
+        iteration_counter = 1
         print('Iteration ',iteration_counter,': Value = ',t, ': Error = ', error)
         while error > tol:
             iteration_counter += 1
